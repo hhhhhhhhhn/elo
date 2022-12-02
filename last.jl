@@ -64,7 +64,7 @@ function possibleEnemies(i, phase)
 	return filter(j -> j != i, bracket)
 end
 
-for phase in 4:floor(Int, log2(length(competitors)))
+for phase in 1:floor(Int, log2(length(competitors)))
 	println("===== PARTIDO ", phase, " =====")
 	for (i, prob) in enumerate(probabilities(phase))
 		println(competitors[i][1], ": ", round(prob * 100, digits=2), "%")
